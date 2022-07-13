@@ -45,6 +45,8 @@ header{
     color: #ffffff;
     font-size: 2.5rem;
     text-shadow: 2px 2px 3px #000000;
+    transition-property: text-shadow color;
+    transition-duration: .5s;
 }
 
 .header__txt:hover{
@@ -52,9 +54,6 @@ header{
     text-shadow: 0px 0px 15px #ff005c;
 }
 
-.header__txt:active{
-    color: #ff005c;
-}
 /* Footer */
 
 footer{
@@ -76,6 +75,8 @@ footer{
     font-size: 2.5rem;
     color: #ffffff;
     text-shadow: 2px 2px 3px #000000;
+    transition-property: text-shadow color;
+    transition-duration: .5s;
 }
 
 .footer__txt:hover{
@@ -119,6 +120,21 @@ footer{
     text-align: center;
     font-size: 6rem;
     text-shadow: 3px 3px 5px #000000;
+    animation: indextext 5s infinite;
+}
+
+@keyframes indextext{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
 }
 
 /* Other Pages */
@@ -182,6 +198,13 @@ padding-top: 10px;
 
 .buy__hyperlink{
     color: white;
+    transition-property: color text-shadow;
+    transition-duration: .5s;
+}
+
+.buy__hyperlink:hover{
+    color: #ff005c;
+    text-shadow: 0px 0px 15px #ff005c;
 }
 
 .buy__content{
@@ -198,12 +221,15 @@ padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .about__h2{
     text-align: center;
     font-size: 4rem;
     text-shadow: 1px 1px 5px #000000;
+    animation: abouttext 5s infinite;
+    color: #ffffff;
 }
 
 .about__p{
@@ -211,6 +237,28 @@ padding-top: 10px;
     font-size: 2.5rem;
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
+}
+
+@keyframes abouttext{
+    0%{
+        transform: scale(1);
+        color: #ffffff;
+    }
+
+    40%{
+        transform: scale(1.05);
+        color: #ff005c;
+    }
+
+    60%{
+        transform: scale(1.05);
+        color: #ff005c;
+    }
+
+    100%{
+        transform: scale(1);
+        color: #ffffff;
+    }
 }
 
 /* Contact Us*/
@@ -284,6 +332,8 @@ padding-top: 10px;
     background-color: #4b4b4b;
     color: #ffffff;
     border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 .contact__button:hover{
@@ -360,6 +410,8 @@ padding-top: 10px;
     background-color: #4b4b4b;
     color: #ffffff;
     border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 
@@ -438,6 +490,8 @@ padding-top: 10px;
     font-size: 1.5rem;
     color: #ffffff;
     margin-top: 10px;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 .product__button:hover{
@@ -455,6 +509,8 @@ padding-top: 10px;
     color: #ffffff;
     margin-top: 10px;
     margin-left: 50px;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 .product__button__send:hover{
@@ -848,4 +904,3 @@ padding-top: 10px;
 
 
 }
-
