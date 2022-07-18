@@ -9,6 +9,11 @@
     src: url(../fonts/ReemKufi-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: "VT323";
+    src: url(../fonts/VT323-Regular.ttf);
+}
+
 html{
     font-size: 62.5%;
 }
@@ -27,9 +32,28 @@ a{
     text-decoration: none;
 }
 
+main{
+    animation: transitionLoad 1.5s;
+}
+
+@keyframes transitionLoad{
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
 /* Header */
 header{
     grid-area: header;
+}
+
+.header__bg{
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 25px #ff005c;
 }
@@ -42,8 +66,9 @@ header{
 }
 
 .header__txt{
+    font-family: Reem;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     text-shadow: 2px 2px 3px #000000;
 }
 
@@ -52,9 +77,27 @@ header{
     text-shadow: 0px 0px 15px #ff005c;
 }
 
-.header__txt:active{
-    color: #ff005c;
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 25px #ff005c;
 }
+
+.navbar-nav > li > .dropdown-menu a{
+    font-size: 1.75rem;
+    color: #ffffff;
+}
+
+.navbar-nav > li > .dropdown-menu a:hover{
+    color: #ff005c;
+    text-shadow: 0px 0px 15px #ff005c;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav > li > .dropdown-menu hr{
+    color: #ffffff;
+}
+
 /* Footer */
 
 footer{
@@ -73,7 +116,9 @@ footer{
 }
 
 .footer__txt{
-    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: Reem;
+    font-size: 1.75rem;
     color: #ffffff;
     text-shadow: 2px 2px 3px #000000;
 }
@@ -113,12 +158,47 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: transitionLoadIndex 1.5s;
+}
+
+@keyframes transitionLoadIndex{
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
 }
 
 .index__txt{
+    font-family: Reem;
+    text-decoration: none;
     text-align: center;
     font-size: 6rem;
+    color: #ffffff;
     text-shadow: 3px 3px 5px #000000;
+    animation: indextext 10s infinite;
+}
+
+@keyframes indextext{
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.index__txt:hover{
+    color: #ffffff;
 }
 
 /* Other Pages */
@@ -127,6 +207,7 @@ footer{
 
 .pages__body{
     background-color: #232323;
+    font-family: Reem;
 }
 
 .pages__div{
@@ -181,7 +262,11 @@ padding-top: 10px;
 }
 
 .buy__hyperlink{
-    color: white;
+    color: #ffffff;
+}
+
+.buy__hyperlink:hover{
+    color: #ff005c;
 }
 
 .buy__content{
@@ -200,17 +285,41 @@ padding-top: 10px;
     justify-content: center;
 }
 
-.about__h2{
-    text-align: center;
+.about__title{
+    font-family: Reem;
     font-size: 4rem;
+    color: #ffffff;
     text-shadow: 1px 1px 5px #000000;
+    animation: abouttext 10s infinite;
 }
 
 .about__p{
-    text-align: center;
-    font-size: 2.5rem;
+    font-family: Reem;
+    font-size: 2rem;
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
+}
+
+@keyframes abouttext{
+    0%{
+        transform: scale(1);
+        color: #ffffff;
+    }
+
+    40%{
+        transform: scale(1.05);
+        color: #ff005c;
+    }
+
+    60%{
+        transform: scale(1.05);
+        color: #ff005c;
+    }
+
+    100%{
+        transform: scale(1);
+        color: #ffffff;
+    }
 }
 
 /* Contact Us*/
@@ -244,8 +353,8 @@ padding-top: 10px;
 }
 
 .contact__title{
-    text-align: center;
-    font-size: 4.5rem;
+    color: #ffffff;
+    font-size: 4rem;
     text-shadow: 1px 1px 5px #000000;
 }
 
@@ -255,40 +364,38 @@ padding-top: 10px;
     text-shadow: 1px 1px 2px #000000;
 }
 
-.contact__text{
-    text-align: justify;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 2px #000000;
-    padding-top: 15px;
-    padding-bottom: 2.5px;
+.contact__txt{
+    text-decoration: none;
+    font-family: Reem;
+    color: #ffffff;
+    font-size: 2rem;
+    text-shadow: 2px 2px 3px #000000;
 }
 
 .contact__textbox{
     font-family: Reem;
-    background-color: #4b4b4b;
-    color: #ffffff;
-    border-radius: 5px;
-    height: 200px;
+    font-size: 1.25rem;
+    height: auto;
 }
 
 .contact__textbox::placeholder{
-    color: #ffffff;
     opacity: 1;
+}
+
+.contact__input{
+    font-family: Reem;
+    font-size: 1.25rem;
 }
 
 .contact__button{
     width: 13.25rem;
-    margin-top: 15px;
-    margin-left: 65px;
+    margin-left: 50px;
     font-family: Reem;
-    background-color: #4b4b4b;
     color: #ffffff;
-    border-radius: 5px;
+    border-radius: 2.5px;
 }
 
-.contact__button:hover{
-    background-color: #303030;
-}
+
 
 /* Sell */
 
@@ -354,17 +461,10 @@ padding-top: 10px;
 
 .sell__button{
     width: 13.25rem;
-    margin-top: 15px;
-    margin-left: 130px;
+    margin-left: 100px;
     font-family: Reem;
-    background-color: #4b4b4b;
     color: #ffffff;
-    border-radius: 5px;
-}
-
-
-.sell__button:hover{
-    background-color: #303030;
+    border-radius: 2.5px;
 }
 
 .sell__file{
@@ -408,57 +508,59 @@ padding-top: 10px;
 
 .product__title{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
 }
 
 .product__title__names{
     text-align: justify;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
 }
 
 .product__content{
     text-align: justify;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000;
     margin-top: 10px;
 }
 
+.product__link{
+    text-align: justify;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
+    margin-top: 10px;
+}
+
+.product__link:hover{
+    color: #ff005c;
+}
+
 .product__button{
     width: 200px;
     height: fit-content;
-    background-color: #4b4b4b;
     box-shadow: 2px 2px 2px #000000;
-    border-radius: 5px;
+    border-radius: 2.5px;
     font-family: Reem;
     font-size: 1.5rem;
     color: #ffffff;
     margin-top: 10px;
-}
-
-.product__button:hover{
-    background-color: #303030;
 }
 
 .product__button__send{
     width: 200px;
     height: fit-content;
-    background-color: #4b4b4b;
     box-shadow: 2px 2px 2px #000000;
-    border-radius: 5px;
+    border-radius: 2.5px;
     font-family: Reem;
     font-size: 1.5rem;
     color: #ffffff;
     margin-top: 10px;
     margin-left: 50px;
-}
-
-.product__button__send:hover{
-    background-color: #303030;
 }
 
 .product__box{
@@ -484,6 +586,34 @@ padding-top: 10px;
     box-shadow: 2px 2px 3px #000000;
     border-radius: 5px;
     margin-top: 20px;
+}
+
+/* Egg */
+
+.egg__body{
+    background-image: url(../imgs/egg.gif);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.egg__div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin: auto;
+    background-color: #4b4b4b4b;
+    width: 40%;
+    height: 40%;
+}
+
+.egg__txt{
+    font-family: VT323;
+    font-size: 1.5rem;
+    color: #ffffff;
 }
 
 /* Media Querys*/
@@ -848,4 +978,3 @@ padding-top: 10px;
 
 
 }
-

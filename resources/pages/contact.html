@@ -5,51 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imgs/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Gone!</title>
 </head>
 <body class="pages__body">
     <div class="pages__div">
         <header>
-            <nav>                
-                <ul class="header__ul">
-                    <li><a href="../../index.html" class="header__txt">Gone!</a></li>
-                    <li><a href="./buy.html" class="header__txt">Comprar</a></li>
-                    <li><a href="./sell.html" class="header__txt">Vender</a></li>
-                    <li><a href="./about.html" class="header__txt">Sobre Nosotros</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark header__bg header__txt">
+                <div class="container-fluid">
+                    <a class="navbar-link header__txt" href="../../index.html">
+                        <svg style="width:40px;height:40px" viewBox="0 0 27.5 27.5">
+                            <path fill="currentColor" d="M2,10.96C1.5,10.68 1.35,10.07 1.63,9.59L3.13,7C3.24,6.8 3.41,6.66 3.6,6.58L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.66,6.72 20.82,6.88 20.91,7.08L22.36,9.6C22.64,10.08 22.47,10.69 22,10.96L21,11.54V16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V10.96C2.7,11.13 2.32,11.14 2,10.96M12,4.15V4.15L12,10.85V10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V12.69L14,15.59C13.67,15.77 13.3,15.76 13,15.6V19.29L19,15.91M13.85,13.36L20.13,9.73L19.55,8.72L13.27,12.35L13.85,13.36Z" />
+                        </svg>
+                        Gone!
+                    </a>
+                    
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active header__txt" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <svg style="width:35px;height:35px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                                    </svg>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Mis Publicaciones</a></li>
+                                    <li><a class="dropdown-item" href="#">Mis Datos</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="../pages/contact.html">Contactanos</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link active header__txt" aria-current="page" href="./buy.html">Comprar</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link active header__txt" href="./sell.html">Vender</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         
         <main class="contact__main">
-                <form action="" method="post" class="contact__form">
-                    <legend class="contact__title">Contactanos!</legend>
-                    
-                    <label for="nombre-completo" class="contact__first__text">Nombre y Apellido</label>
-                    <input type="text" placeholder="John Doe" name="nombre-completo" class="contact__box">
-    
-                    <label for="email-add" class="contact__text">Correo Electronico</label>
-                    <input type="email" placeholder="johndoe@example.com" name="email-add" class="contact__box">
-    
-                    <label for="phone-num" class="contact__text">Telefono</label>
-                    <input type="tel" placeholder="+549290115112233" name="phone-num" class="contact__box">
-    
-                    <label for="contact-hours" class="contact__text">Horas de Contacto</label>
-                    <input type="text" placeholder="13:00 a 18:00" name="contact-hours" class="contact__box">
-    
-                    <label for="contact-message" class="contact__text">Mensaje</label>
-                    <textarea name="contact-messagebox" placeholder="Escribe tu mensaje aqui!" id="" cols="30" rows="10" class="contact__textbox"></textarea>
-    
-                    <button type="submit" class="contact__button">Enviar</button>
-                </form>
+            <form>
+                <legend class="contact__title">Contactanos!</legend>
+                
+                <div class="mb-3">
+                    <label for="contact-name" class="form-label contact__txt">Nombre y Apellido</label>
+                    <input type="text" class="form-control contact__input" id="contact-name" placeholder="John Doe">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="contact-email" class="form-label contact__txt">Correo Electronico</label>
+                    <input type="email" class="form-control contact__input" id="contact-email" placeholder="johndoe@example.com">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="contact-tel" class="form-label contact__txt">Telefono</label>
+                    <input type="text" class="form-control contact__input" id="contact-tel" placeholder="2901-15510011">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="contact-hours" class="form-label contact__txt">Horas de Contacto</label>
+                    <input type="text" class="form-control contact__input" id="contact-hours" placeholder="14:00 a 15:00">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="contact-message" class="form-label contact__txt">Mensaje</label>
+                    <textarea class="form-control contact__textbox" id="contact-message" rows="3" placeholder="Dejanos tu mensaje!"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-secondary contact__button">Enviar</button>
+            </form>
         </main>
         
         <footer>
             <ul class="footer__ul">
-                <li><a href="mailto: gonzalosolaligue@gmail.com" class="footer__txt">Made by Gonzalo Solaligue - 2022</a></li>
-                <li><a href="./contact.html" class="footer__txt">Contactanos</a></li>
+                <a class="nav-item footer__txt" href="mailto: gonzalosolaligue@gmail.com" >Made by Gonzalo Solaligue - 2022</a>
+                <a class="nav-item footer__txt" href="../pages/about.html" >Sobre Nosotros</a>
             </ul>
         </footer>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
