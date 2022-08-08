@@ -1,0 +1,142 @@
+/* Product */
+
+.background{
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: map-get($colors , secondary);
+    box-shadow: $shadowcard;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.product{
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    
+    &__video{
+        height: 250px;
+        width: 330px;
+    }
+    
+    &__card{
+        width: 330px;
+        height: 450px;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+        
+        &__text{
+            padding-top: 75px;
+            width: 330px;
+            height: 450px;
+            margin: 20px;
+            text-align: center;
+            transition: all 0.25s;
+        }
+        
+        &__title{
+            @extend .card__title;
+        }
+        
+        &__description{
+            @extend .card__description;
+            padding-bottom: 10px;
+        }
+
+        &__price{
+            @extend .card__title;
+            padding-top: 0px;
+            padding-bottom: 15px;
+        }
+        
+        &__link{
+            @extend .card__link;
+            width: 100px;
+            &__text{
+                @extend .card__link__text
+            }
+        }
+        &__link:hover{
+            background: map-get($colors , bluem);
+        }
+    }
+}
+
+
+
+.carousel__item__4{
+    z-index: 2;
+    opacity: 1;
+    background: url('../imgs/sm-1.jpg') no-repeat center;
+    background-size: contain;
+    }
+
+.carousel__item__5{
+    background: url('../imgs/sm-2.jpg') no-repeat center;
+    background-size: contain;
+}
+
+.carousel__item__6{
+    background: url('../imgs/sm-3.jpg') no-repeat center;
+    background-size: contain;
+}
+
+*:target ~ .carousel__item__4{
+    opacity: 0;
+}
+
+#carousel__item__4:target ~ .carousel__item__4{
+    opacity: 1;
+}
+
+#carousel__item__5:target ~ .carousel__item__5, #carousel__item__6:target ~ .carousel__item__6{
+z-index: 3;
+opacity: 1;
+}
+
+@media only screen and (max-width: 992px){
+    .product__card{
+        height: 375px;
+    }
+    .product__card__text{
+        height: 375px;
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .product__card{
+        height: 350px;
+    }
+    
+    .product__card__text{
+        padding-top: 50px;
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .product__card{
+        height: 250px;
+    }
+
+    .product__card__text{
+        height: 250px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .product__video{
+        padding-top: 30px;
+        height: 220px;
+        width: 300px;
+    }
+}

@@ -1,0 +1,34 @@
+/*Footer*/
+
+.footer{
+    margin-top: auto;
+    background-color: map-get($colors , secondary);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &__ul{
+        @include flex-center;
+        padding-bottom: 1rem;
+    }
+    
+    &__a{
+        padding-left: 2rem;
+        color: map-get($colors , primary);
+        font-size: map-get($font-sizes , txtm);
+        font-weight: $med;
+    }
+    
+    &__mail{
+        @extend .footer__ul;
+        padding-bottom: 0;
+        @extend .footer__a;
+        padding-left: 0;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .footer__a{
+        font-size: map-get($font-sizes , txts);
+    }
+}

@@ -1,0 +1,33 @@
+/* Colors */
+$colors:(
+    "primary": #000000,
+    "secondary": #ffffff,
+    "extra": #7a7a7a,
+    "blues": #4696ff,
+    "bluem": #006eff,
+    "background": #E6E6E6,
+    "backgroundalt": rgba(0, 0, 0, 0.2),
+);
+
+/* Shadows */
+
+$shadowcard: 0 2px 2px rgba(0, 0, 0, 0.5);
+$shadowhover:  0 12px 16px rgba(0, 0, 0, 0.5);
+$shadowtext:  1px 1px 1px #000000;
+
+/* Text Size */
+
+$font-sizes:(
+    "txtxs": 1.25rem,
+    "txts": 1.5rem,
+    "txtm": 1.75rem,
+    "txtl": 2rem,
+    "txtxl": 2.5rem,
+    "txtxxl": 3rem,
+);
+
+/* Text Weight*/
+
+$light: 300;
+$med:  400;
+$bold: 500;

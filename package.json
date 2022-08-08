@@ -1,0 +1,26 @@
+{
+  "name": "gone-gonzalo-solaligue",
+  "version": "1.0.0",
+  "description": "Repositorio para el Curso de Desarrollo Web de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass --include-path scss sass/main.scss ./assets/css/styles.css",
+    "watch-sass": "nodemon -e scss -x \"npm run build-sass\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecomeister/gone-gonzalo-solaligue.git"
+  },
+  "keywords": [],
+  "author": "Gonzalo Solaligue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tecomeister/gone-gonzalo-solaligue/issues"
+  },
+  "homepage": "https://github.com/tecomeister/gone-gonzalo-solaligue#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

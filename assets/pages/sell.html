@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Plataforma de Compra/Venta de Videojuegos Usados">
+    <meta name="keywords" content="Comprar, Vender, VideoJuegos, Retro, Permutar, NES, SNES, GB, GBC, GBA, GC, WII, WII U, SWITCH, PSX, PS2, PS3, PS4, PS5, Xbox, Xbox 360, Xbox One, Sega, Nintendo, Sony, Microsoft">
+    <meta name="author" content="Gonzalo Solaligue">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../imgs/favicon.svg" type="image/x-icon">
+    <title>Gone! - Vender</title>
+</head>
+<body>
+    <header class="header">
+        <input type="checkbox" name="nav-toggle" id="nav-toggle" class="nav__toggle">
+        <label for="nav-toggle" class="nav__toggle__label">
+            <img src="../imgs/menu.svg" alt="Menu" class="nav__toggle__img">
+        </label>
+        
+        <a href="../../index.html" class="logo">Gone!</a>
+        
+        <nav class="nav">
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="./buy.html" class="nav__a">Comprar</a></li>
+                <li class="nav__li"><a href="./sell.html" class="nav__a">Vender</a></li>
+                <li class="nav__li"><a href="./login.html" class="nav__a">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="form">
+            <div class="form__container">
+                <form action="" method="get" class="form__form">
+                    <h2 class="form__title">Publica tu Artículo</h2>
+                    
+                    <div class="form__div">
+                        <div class="form__group">
+                            <input type="text" id="name" class="form__input" placeholder=" ">
+                            <label for="name" class="form__input__name">Nombre del juego:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" id="platform" class="form__input" placeholder=" ">
+                            <label for="platform" class="form__input__name">Plataforma:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" id="wear" class="form__input" placeholder=" ">
+                            <label for="wear" class="form__input__name">Estado:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" id="price" class="form__input" placeholder=" ">
+                            <label for="price" class="form__input__name">Precio:</label>
+                            <span class="form__line"></span>
+                        </div>
+                        
+                        <div class="form__group">
+                            <textarea name="description" id="description" cols="30" rows="10" class="form__input" placeholder=" "></textarea>
+                            <label for="description" class="form__input__name">Descripción</label>
+                        </div>
+                    </div>
+                    
+                        <button type="submit" class="form__button">Publicar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <ul class="footer__ul">
+            <li><a href="../../index.html" class="footer__a">Inicio</a></li>
+            <li><a href="./about.html" class="footer__a">Sobre Nosotros</a></li>
+            <li><a href="./contact.html" class="footer__a">Contactanos</a></li>
+        </ul>
+        <a href="mailto:gonzalosolaligue@gmail.com" class="footer__mail">Gonzalo Solaligue @ 2022</a>
+    </footer>
+</body>
+</html>

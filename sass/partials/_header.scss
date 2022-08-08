@@ -1,0 +1,133 @@
+/* Header */
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 1fr) ;
+    background: map-get($colors , secondary);
+    width: 100%;
+    text-align: justify;
+}
+
+.nav{
+    grid-column: 3;
+    
+    &__toggle{
+        display: none;
+        
+        &__label{
+            display: none;
+        }
+        
+        &__img{
+            height: 3rem;
+            width: 3rem;
+        }
+    }
+    
+    &__ul{
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 0.7rem;
+        padding-right: 5rem;
+    }
+    
+    &__li{
+        margin-left: 5rem;
+    }
+    
+    &__a{
+        position: relative;
+        opacity: 1;
+        color: map-get($colors , extra);
+        font-size: map-get($font-sizes , txtm);
+        font-weight: $bold;
+    }
+    
+    &__a:hover{
+        color: map-get($colors , primary);
+    }
+    
+    &__a::after{
+        content: "";
+        position: absolute;
+        background-color: map-get($colors , blues);
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -5px;
+        transition: 0.5s;
+    }
+    
+    &__a:hover::after{
+        width: 100%;
+    }
+}
+
+.logo{
+    color: map-get($colors , primary);
+    grid-column: 1/2;
+    margin-left: 15%;
+    padding-top: 0.3rem;
+    padding-bottom: 0.5rem;
+    font-size: map-get($font-sizes , txtxl);
+    font-weight: $bold;
+}
+
+@media only screen and (max-width: 992px) {
+
+    .header{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    .nav{
+        background: map-get($colors , secondary);
+        width: 100%;
+        margin-top: 3.7rem;
+        position: absolute;
+        text-align: center;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        
+        &__ul{
+            all: unset;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            list-style-type: none;
+        }
+        
+        &__li{
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+            margin-right: 2rem;
+        }
+        
+        &__a{
+            font-size: map-get($font-sizes , txts);
+            font-weight: $bold;
+            opacity: 0;
+            transition: opacity 175ms ease-in-out;
+        }
+    
+        &__toggle:checked ~ nav{
+            transform: scale(1,1);
+        }
+        
+        &__toggle:checked ~ nav a{
+            opacity: 1;
+            transition: opacity 250ms ease-in-out 250ms;
+        }
+        
+        &__toggle__label{
+            @include flex-center;
+            margin-left: 1rem;
+        }
+    }
+    
+    .logo{
+        grid-column: 3/4;
+        margin-left: 0;
+        @include flex-center;
+    }
+}

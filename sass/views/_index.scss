@@ -1,0 +1,182 @@
+/*Index*/
+
+/* Carousel */
+.carousel{
+    height: 400px;
+    position: relative;
+    width: 100%;
+    display: block;
+    
+    &__item{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 25px 50px;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    &__arrow{
+        border: solid map-get($colors , secondary);
+        border-width: 0 3px 3px 0;
+        border-radius: 2px;
+        display: inline-block;
+        padding: 12px;
+    
+        &__prev{
+            left: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(135deg);
+        }
+        
+        &__next{
+            right: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+    
+    &__item__1{
+        z-index: 2;
+        opacity: 1;
+        background: map-get($colors , backgroundalt) url('../imgs/ssbu.jpg') no-repeat center;
+        background-size: contain;
+        }
+    
+    &__item__2{
+        background: map-get($colors , backgroundalt) url('../imgs/re4.jpg') no-repeat center;
+        background-size: contain;
+    }
+    
+    &__item__3{
+        background: map-get($colors , backgroundalt) url('../imgs/re3.jpg') no-repeat center;
+        background-size: contain;
+    }
+    
+    &__text{
+        @include flex-center;
+        color: map-get($colors , secondary);
+        font-size: map-get($font-sizes , txts);
+        font-weight: $bold;
+        text-shadow: $shadowtext;
+    }
+}
+
+[id^= "carousel__item__"]{
+    display: none;
+}
+
+*:target ~ .carousel__item__1{
+    opacity: 0;
+}
+
+#carousel__item__1:target ~ .carousel__item__1{
+    opacity: 1;
+}
+
+#carousel__item__2:target ~ .carousel__item__2, #carousel__item__3:target ~ .carousel__item__3{
+z-index: 3;
+opacity: 1;
+}
+
+/* Cards */
+
+.title{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: map-get($colors , primary);
+    font-size: map-get($font-sizes , txtxl);
+    font-weight: $bold;
+}
+
+.container{
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card{
+    width: 330px;
+    height: 450px;
+    border-radius: 8px;
+    background-color: map-get($colors , secondary);
+    box-shadow: $shadowcard;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+
+    &__img{
+        width: 330px;
+        height: 220px;
+        border-radius: 5px;
+    }
+    
+    &__title{
+        color: map-get($colors , primary);
+        font-size: map-get($font-sizes , txtxl);
+        font-weight: $bold;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    &__description{
+        padding-top: 10px;
+        padding-bottom: 15px;
+        color: map-get($colors , primary);
+        font-size: map-get($font-sizes , txts);
+        font-weight: $med;
+    }
+    
+    &__link{
+        height: 25px;
+        width: 50px;
+        border-radius: 7px;
+        background: map-get($colors , blues);
+        padding-top: 2.5px;
+        margin: auto;
+        transition: background .5s;
+        
+        &__text{
+            color: map-get($colors , secondary);
+            font-size: map-get($font-sizes , txts);
+            font-weight: $med;
+        }
+    }
+    
+    &__link:hover{
+        background: map-get($colors , bluem);
+    }
+}
+
+.card:hover{
+    transform: translateY(-15px);
+    box-shadow: $shadowhover;
+}
+
+@media only screen and (max-width: 992px) {
+    .carousel{
+        margin: 25px auto;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .carousel{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 320px){
+    .carousel__text{
+        font-size: map-get($font-sizes , txtxs);
+        margin-top: 40px;
+    }
+}
