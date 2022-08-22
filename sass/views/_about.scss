@@ -7,7 +7,6 @@
         @extend .card;
         width: 400px;
         height: 250px;
-        margin-top: 50px;
     }
 
     &__container:hover{
@@ -26,5 +25,32 @@
         font-size: map-get($font-sizes , txtm);
         font-weight: $med;
         margin-top: 30px;
+    }
+}
+
+@media (max-height: 850px){
+    .about{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .about{
+        width: 300px;
+        
+        &__container{
+            width: 300px;
+        }
+        
+        &__title{
+            margin-top: 60px;
+        }
+        
+        &__text{
+            font-size: map-get($font-sizes , txtxs);
+            font-weight: $med;
+            margin-top: 25px;
+        }
     }
 }

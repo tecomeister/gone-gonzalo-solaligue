@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="shortcut icon" href="../imgs/favicon.svg" type="image/x-icon">
-    <title>Gone! - Sobre Nosotros</title>
+    <title>Gone! - Producto</title>
 </head>
 <body>
     <header class="header">
@@ -31,22 +31,62 @@
         </nav>
     </header>
     
-    <main class="body__form">
-        <section>
-            <article>
-                <div class="about">
-                    <div class="about__container">
-                        <h2 class="about__title">Sobre Nosotros</h2>
-                        <p class="about__text">
-                            Gone! es un servicio de compra/venta <br>
-                            que nace a partir de un desafío de la <br>
-                            plataforma de aprendizaje virtual <br>
-                            Coder House.
-                        </p>
+    <main class="main__product">
+        <div class="background">
+            <div class="product">
+                <div class="product__card">
+                    <div class="buy__slides__navigation">
+                        <label for="img1" class="buy__slides__bar"></label>
+                        <label for="img2" class="buy__slides__bar"></label>
+                        <label for="img3" class="buy__slides__bar"></label>
+                    </div>
+                    <div class="buy__slideshow">
+                        <div class="buy__slides">
+                            <input type="radio" name="slides__selector" id="img1" class="buy__slides__selector" checked>
+                            <input type="radio" name="slides__selector" id="img2" class="buy__slides__selector">
+                            <input type="radio" name="slides__selector" id="img3" class="buy__slides__selector">
+                            <div class="buy__slides__content img">
+                                <img src="../imgs/gow2-1.jpg" alt="Imagen 1" class="buy__slides__img">
+                            </div>
+                            <div class="buy__slides__content">
+                                <img src="../imgs/gow2-2.jpg" alt="Imagen 2" class="buy__slides__img">
+                            </div>
+                            <div class="buy__slides__content">
+                                <img src="../imgs/gow2.jpg" alt="Imagen 3" class="buy__slides__img">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </article>
-        </section>
+                
+                <div class="product__card__text">
+                    <h4 class="product__card__title">God of War II</h4>
+                    <p class="product__card__description">
+                        Plataforma = PS2 <br>
+                        <br>
+                        God of War II es un Hack & Slash <br>
+                        lanzado en el año 2007 para la PS2. <br>
+                        Ayuda a Kratos en su aventura <br>
+                        para detener a Zeus.
+                    </p>
+                    <h4 class="product__card__price">Precio = $3.000</h4>
+                    <div class="product__card__link">
+                        <a href="#" class="product__card__link__text">Comprar</a>
+                    </div>
+                </div>
+                
+                <div class="product__video">
+                    <iframe width="535" height="401" src="https://www.youtube.com/embed/oe0OmX9hINA" title="God of War II PlayStation 2 Trailer - Official" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="product__video__source"></iframe>
+                </div>
+                
+                <div class="product__card">
+                    <form action="" method="get" class="form__group">
+                        <label for="message" class="product__card__textbox__name">Consulta:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="product__card__textbox" placeholder=" "></textarea>
+                        <button type="submit" class="product__card__button">Publicar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
         
         <ul class="animation">
             <li class="animation__li"><img src="../imgs/controller1.svg" alt="controller"></li>

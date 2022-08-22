@@ -20,6 +20,8 @@
         
         <a href="./index.html" class="logo">Gone!</a>
         
+        <input type="search" name="search__bar" id="search__bar" placeholder="Busca los juegos que te interesan" class="header__searchbar">
+        
         <nav class="nav">
             <ul class="nav__ul">
                 <li class="nav__li"><a href="./assets/pages/buy.html" class="nav__a">Comprar</a></li>
@@ -30,38 +32,28 @@
     </header>
     
     <main>
-        <section>
-            <article>
-                <div class="carousel">
-                    <span id="carousel__item__1"></span>
-                    <span id="carousel__item__2"></span>
-                    <span id="carousel__item__3"></span>
-                    
-                    <div class="carousel__item carousel__item__1">
-                        <a href="#carousel__item__3" class="carousel__arrow__prev carousel__arrow"></a>
-                        <a href="#carousel__item__2" class="carousel__arrow__next carousel__arrow"></a>
-                        <p class="carousel__text">Encontrá tus juegos favoritos</p>
+        <section class="slideshow">
+            <article class="slider">
+                <div class="slider__container">
+                    <div class="slider__content">
+                        <img src="./assets/imgs/ssbu.jpg" alt="Imagen 1" class="slider__img">
+                        <p class="slider__text__1">Encontrá tus juegos favoritos</p>
                     </div>
-                    
-                    <div class="carousel__item carousel__item__2">
-                        <a href="#carousel__item__1" class="carousel__arrow__prev carousel__arrow"></a>
-                        <a href="#carousel__item__3" class="carousel__arrow__next carousel__arrow"></a>
-                        <p class="carousel__text">Vende los que no te gustan mucho</p>
+                    <div class="slider__content">
+                        <img src="./assets/imgs/re4.jpg" alt="Imagen 2" class="slider__img">
+                        <p class="slider__text__2">Vende los que no te gustan mucho</p>
                     </div>
-                    
-                    <div class="carousel__item carousel__item__3">
-                        <a href="#carousel__item__2" class="carousel__arrow__prev carousel__arrow"></a>
-                        <a href="#carousel__item__1" class="carousel__arrow__next carousel__arrow"></a>
-                        <p class="carousel__text">Compra esos juegos que te encantan</p>
+                    <div class="slider__content">
+                        <img src="./assets/imgs/re3.jpg" alt="Imagen 3" class="slider__img">
+                        <p class="slider__text__3">Compra esos juegos que te encantan</p>
                     </div>
                 </div>
             </article>
         </section>
-
+        
         <section>
             <article>
                 <h2 class="title">Publicaciones Recientes</h2>
-
                 <div class="container">
                     <div class="card">
                         <img src="./assets/imgs/gh3.jpg" alt="imagen" class="card__img">
@@ -76,7 +68,7 @@
                             para acertar las notas de la canción.
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_1.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                     
@@ -93,13 +85,13 @@
                             a través de portales para acabar con "Quake"<br>
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_2.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                     
                     <div class="card">
                         <img src="./assets/imgs/d2.jpg" alt="imagen" class="card__img">
-                        <h4 class="card__title">Diablo II</h4>
+                        <h4 class="card__title">Diablo II - Resurrected</h4>
                         <p class="card__description">
                             Plataforma = PC <br>
                             Estado = 8/10 <br>
@@ -110,7 +102,7 @@
                             liberar la maldad de la tierra.
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_3.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                     
@@ -127,12 +119,14 @@
                             a Mother Brain y recuperar el último Metroid.
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_4.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <img src="./assets/imgs/dc.jpg" alt="imagen" class="card__img">
+                        <div class="card__img__43__bg">
+                            <img src="./assets/imgs/dc.jpg" alt="imagen" class="card__img__43">
+                        </div>
                         <h4 class="card__title">Demons Crest</h4>
                         <p class="card__description">
                             Plataforma = SNES <br>
@@ -144,12 +138,14 @@
                             poderes inimaginables y eliminar a Phalanx.
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_5.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                     
                     <div class="card">
-                        <img src="./assets/imgs/mrpg.jpg" alt="imagen" class="card__img">
+                        <div class="card__img__43__bg">
+                            <img src="./assets/imgs/mrpg.jpg" alt="imagen" class="card__img__43">
+                        </div>
                         <h4 class="card__title">Super Mario RPG</h4>
                         <p class="card__description">
                             Plataforma = SNES <br>
@@ -161,21 +157,39 @@
                             derrotar al Rey Koopa... o eso parece.
                         </p>
                         <div class="card__link">
-                            <a href="./assets/pages/product.html" class="card__link__text">Ver</a>
+                            <a href="./assets/pages/product_6.html" class="card__link__text">Ver</a>
                         </div>
                     </div>
                 </div>
             </article>
         </section>
+        
+        <ul class="animation">
+            <li class="animation__li"><img src="./assets/imgs/controller1.svg" alt="controller"></li>
+            <li class="animation__li"><img src="./assets/imgs/controller2.svg" alt="controller"></li>
+            <li class="animation__li"><img src="./assets/imgs/controller3.svg" alt="controller"></li>
+            <li class="animation__li"><img src="./assets/imgs/controller1.svg" alt="controller"></li>
+            <li class="animation__li"><img src="./assets/imgs/controller2.svg" alt="controller"></li>
+            <li class="animation__li"><img src="./assets/imgs/controller3.svg" alt="controller"></li>
+        </ul>
     </main>
-    
+
     <footer class="footer">
         <ul class="footer__ul">
             <li><a href="./index.html" class="footer__a">Inicio</a></li>
             <li><a href="./assets/pages/about.html" class="footer__a">Sobre Nosotros</a></li>
             <li><a href="./assets/pages/contact.html" class="footer__a">Contactanos</a></li>
         </ul>
+        
+        <ul class="footer__icons">
+            <li><a href="https://www.facebook.com/" class="footer__icons__a"><img src="./assets/imgs/fb.svg" alt="" class="footer__icons__imgs"></a></li>
+            <li><a href="https://www.instagram.com/" class="footer__icons__a"><img src="./assets/imgs/insta.svg" alt="" class="footer__icons__imgs"></a></li>
+            <li><a href="https://twitter.com/" class="footer__icons__a"><img src="./assets/imgs/twttr.svg" alt="" class="footer__icons__imgs"></a></li>
+            <li><a href="https://www.whatsapp.com/" class="footer__icons__a"><img src="./assets/imgs/wsp.svg" alt="" class="footer__icons__imgs"></a></li>
+        </ul>
+        
         <a href="mailto:gonzalosolaligue@gmail.com" class="footer__mail">Gonzalo Solaligue @ 2022</a>
     </footer>
+</div>
 </body>
 </html>

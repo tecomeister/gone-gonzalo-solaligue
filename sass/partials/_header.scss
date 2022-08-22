@@ -2,10 +2,29 @@
 
 .header{
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 1fr) ;
+    grid-template-columns: 1fr 1fr 1fr ;
     background: map-get($colors , secondary);
     width: 100%;
     text-align: justify;
+    
+    &__searchbar{
+        grid-column: 2;
+        margin-top: 2.5px;
+        height: 80%;
+        width: 100%;
+        font-family: 'Ubuntu', sans-serif;
+        padding-left: 5px;
+        outline-color: none;
+        transition: 0.75s;
+    }
+    
+    &__searchbar::placeholder{
+        font-weight: $bold;
+    }
+    
+    &__searchbar:focus{
+        outline-color: map-get($colors , bluem);
+    }
 }
 
 .nav{
@@ -65,7 +84,7 @@
 
 .logo{
     color: map-get($colors , primary);
-    grid-column: 1/2;
+    grid-column: 1;
     margin-left: 15%;
     padding-top: 0.3rem;
     padding-bottom: 0.5rem;
@@ -73,10 +92,20 @@
     font-weight: $bold;
 }
 
+@media only screen and (max-width: 1310px){
+    .header{
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+}
+
 @media only screen and (max-width: 992px) {
 
     .header{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        
+        &__searchbar{
+            display: none;
+        }
     }
     
     .nav{

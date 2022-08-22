@@ -1,10 +1,10 @@
 /*Footer*/
 
 .footer{
-    margin-top: auto;
     background-color: map-get($colors , secondary);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-top: auto;
 
     &__ul{
         @include flex-center;
@@ -19,11 +19,23 @@
     }
     
     &__mail{
-        @extend .footer__ul;
-        padding-bottom: 0;
+        @include flex-center;
         @extend .footer__a;
-        padding-left: 0;
         opacity: 0.5;
+    }
+
+    &__icons{
+        @include flex-center;
+        padding-bottom: 1rem;
+
+        &__a{
+            margin-left: 3rem;
+        }
+
+        &__imgs{
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 

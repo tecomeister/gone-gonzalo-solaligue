@@ -17,6 +17,7 @@ body{
     background-color: map-get($colors , background);
     font-family: 'Ubuntu', sans-serif;
     font-weight: $med;
+    animation: transitionOnLoad 0.75s;
 }
 
 ul{
@@ -25,4 +26,16 @@ ul{
 
 a{
     text-decoration: none;
+}
+
+@keyframes transitionOnLoad{
+    from{
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
 }

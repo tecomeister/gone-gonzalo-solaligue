@@ -1,5 +1,9 @@
 /* Form */
 
+.body__form{
+    margin: auto;
+}
+
 .form{
     @include flex-center;
     flex-wrap: wrap;
@@ -12,8 +16,6 @@
         border-radius: 8px;
         background-color: map-get($colors , secondary);
         box-shadow: $shadowcard;
-        margin: 20px;
-        margin-top: 50px;
         text-align: center;
         transition: all 0.25s;
     }
@@ -70,7 +72,7 @@
         outline: none;
         border-bottom: 1px solid map-get($colors , extra);
         resize: none;
-
+        
         &__name{
             color: map-get($colors , extra);
             font-size: map-get($font-sizes , txts);
@@ -124,5 +126,29 @@
     &__input:focus ~ &__line,
     &__input:not(:placeholder-shown) ~ &__line{
         transform: scale(1);
+    }
+}
+
+@media (max-height: 850px){
+    .form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .form{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .form{
+        width: 300px;
+        
+        &__container{
+            width: 300px;
+        }
     }
 }

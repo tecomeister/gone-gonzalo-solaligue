@@ -1,10 +1,14 @@
 /* Product */
 
+.main__product{
+    margin: auto;
+}
+
 .background{
     @include flex-center;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
     border-radius: 8px;
     background-color: map-get($colors , secondary);
@@ -20,22 +24,16 @@
     max-width: 1200px;
     margin: auto;
     
-    &__video{
-        height: 250px;
-        width: 330px;
-    }
-    
     &__card{
         width: 330px;
-        height: 450px;
+        height: 250px;
         margin: 20px;
         text-align: center;
         transition: all 0.25s;
         
         &__text{
-            padding-top: 75px;
             width: 330px;
-            height: 450px;
+            height: 250px;
             margin: 20px;
             text-align: center;
             transition: all 0.25s;
@@ -49,7 +47,7 @@
             @extend .card__description;
             padding-bottom: 10px;
         }
-
+        
         &__price{
             @extend .card__title;
             padding-top: 0px;
@@ -60,83 +58,197 @@
             @extend .card__link;
             width: 100px;
             &__text{
-                @extend .card__link__text
+                @extend .card__link__text;
             }
         }
+        
         &__link:hover{
             background: map-get($colors , bluem);
         }
+        
+        &__textbox{
+            margin-top: 10px;
+            width: 100%;
+            font-family: 'Ubuntu', sans-serif;
+            color: map-get($colors , primary);
+            font-size: map-get($font-sizes , txts);
+            font-weight: $med;
+            padding: .6rem .3rem;
+            resize: none;
+            
+            &__name{
+                color: map-get($colors , primary);
+                font-size: map-get($font-sizes , txtm);
+                font-weight: $bold;
+            }
+        }
+        
+        &__button{
+            @extend .form__button;
+            margin-top: 10px;
+        }
+    }
+    
+    &__video{
+        @include flex-center;
+        width: 330px;
+        height: 250px;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+        
+        &__source{
+            height: auto;
+            width: 100%;
+        }
     }
 }
 
+/* Slideshow with Controlls */
 
+.buy__slideshow{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 
-.carousel__item__4{
-    z-index: 2;
-    opacity: 1;
-    background: url('../imgs/sm-1.jpg') no-repeat center;
-    background-size: contain;
+.buy__slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+    
+    &__selector{
+        position: absolute;
+        visibility: hidden;
     }
-
-.carousel__item__5{
-    background: url('../imgs/sm-2.jpg') no-repeat center;
-    background-size: contain;
+    
+    &__content{
+        width: 330px;
+        transition: 0.6s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__img{
+        width: 330px;
+    }
+    
+    &__navigation{
+        display: flex;
+        margin-left: 75px;
+        position: absolute;
+        margin-top: 225px;
+    }
+    
+    &__bar{
+        width: 50px;
+        height: 10px;
+        background-color: map-get($colors , blues);
+        border-radius: 2px;
+        box-shadow: $shadowslide;
+        margin: 6px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    
+    &__bar:hover{
+        background-color: map-get($colors , bluem);
+    }
 }
 
-.carousel__item__6{
-    background: url('../imgs/sm-3.jpg') no-repeat center;
-    background-size: contain;
+#img1:checked ~ .img{
+    margin-left: 0;
 }
 
-*:target ~ .carousel__item__4{
-    opacity: 0;
+#img2:checked ~ .img{
+    margin-left: -20%;
 }
 
-#carousel__item__4:target ~ .carousel__item__4{
-    opacity: 1;
+#img3:checked ~ .img{
+    margin-left: -40%;
 }
 
-#carousel__item__5:target ~ .carousel__item__5, #carousel__item__6:target ~ .carousel__item__6{
-z-index: 3;
-opacity: 1;
-}
+/* Media Queries */
 
 @media only screen and (max-width: 992px){
-    .product__card{
-        height: 375px;
+    .background{
+        width: 98%;
     }
-    .product__card__text{
-        height: 375px;
-        padding-top: 100px;
+    .product__card{
+        margin-bottom: 40px;
+        
+        &__text{
+            margin-bottom: 40px;
+        }
     }
 }
 
 @media only screen and (max-width: 768px){
     .product__card{
-        height: 350px;
-    }
-    
-    .product__card__text{
-        padding-top: 50px;
-        height: 350px;
+        margin-bottom: 40px;
+        &__text{
+            margin-bottom: 40px;
+        }
     }
 }
 
 @media only screen and (max-width: 480px){
-    .product__card{
-        height: 250px;
+    .background{
+        width: 90%;
     }
-
     .product__card__text{
-        height: 250px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
 }
 
 @media only screen and (max-width: 320px){
-    .product__video{
-        padding-top: 30px;
-        height: 220px;
-        width: 300px;
+    .background{
+        width: 280px;
+    }
+    
+    .product{
+        &__card{
+            margin-bottom: 0;
+            
+            &__text{
+                margin-bottom: 0;
+                margin-top: 35px;
+            }
+            
+            &__description{
+                font-size: map-get($font-sizes , txtxs);
+            }
+            
+            &__textbox{
+                height: 165px;
+                margin-top: 0;
+            }
+        }
+        
+        &__video{
+            height: 170px;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__source{
+                height: 170px;
+                width: 250px;
+            }
+        }
+    }
+    
+    .buy__slides__navigation{
+        margin-left: 30px;
+    }
+    .buy__slides__content{
+        width: 250px;
+    }
+    .buy__slides__img{
+        width: 250px;
+    }
+    .buy__slideshow{
+        width: 250px;
     }
 }
